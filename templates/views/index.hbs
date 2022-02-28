@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <link rel="stylesheet" href="css/style.css">
+     
+
+       </script>
+   </head>
+   <body>
+       <div class="main-content">
+       {{>header}}                                   {{!--   partial hbs file used  --}}
+       {{!-- <h1>{{title}}</h1>                          title comes from app.js object ,2nd arg of res.render --}}
+
+       <p>Use this Site to get Weather Update</p>
+       <form>
+<input placeholder="location">
+<button>Search</button>
+       </form>
+       <p id="message1"></p>
+       <p id="message2"></p>
+       <footer>created by {{name}}</footer>
+       </div>
+       {{!-- <img src="images/dddddddddddddddddddddddddddd.jpg"> --}}
+
+        <script src="js/app.js"></script>                          {{!-- loaded here because we need to give event first or script runs after our all elemts are available --}}
+   </body>
+     
+</html>
