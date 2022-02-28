@@ -5,6 +5,7 @@ const hbs = require('hbs')
 const { readdirSync } = require('fs')
 const geocode =require('./utilis/geocode')            //geocode.js
 const forecast = require('./utilis/forecast')         //forecast.js file
+const port = process.env.PORT || 3000
 
 // console.log(__dirname)                          //__dirname gives path of irectory ,src here
 // console.log(path.join(__dirname))            // path helps in finding path, here it will give same path as by simple__dirname as only one argument given
@@ -120,6 +121,6 @@ app.get('*',(req,res)=>{                              //for error messages 404
 
 
 
-app.listen(3000, ()=>{                       // to start an app server , needs 2 arguments i-e port , fun
+app.listen(port, ()=>{                       // to start an app server , needs 2 arguments i-e port , fun
     console.log('server started on port 3000');
 })
